@@ -18,7 +18,7 @@
             productsList.innerHTML = '';
             products.forEach(product => {
                 const li = document.createElement('li');
-                li.textContent = `${product.name} - ${product.price}`;
+                li.textContent = `${product.title} - ${product.price}`;
                 productsList.appendChild(li);
             });
         });
