@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Producto de ejemplo",
+    "description": "Este es un producto de ejemplo",
+    "price": 100,
+    "thumbnail": "imagen.png",
+    "code": "ABC123",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "title": "Producto de ejemplo2",
+    "description": "Este es un producto de ejemplo2",
+    "price": 102,
+    "thumbnail": "imagen2.png",
+    "code": "DEF456",
+    "stock": 12
+  },
+  {
+    "id": 3,
+    "title": "Producto de ejemplo3",
+    "description": "Este es un producto de ejemplo3",
+    "price": 103,
+    "thumbnail": "imagen3.png",
+    "code": "GHI789",
+    "stock": 13
+  },
+  {
+    "id": 4,
+    "title": "Producto de ejemplo4",
+    "description": "Este es un producto de ejemplo4",
+    "price": 104,
+    "thumbnail": "imagen4.png",
+    "code": "JKL123",
+    "stock": 14
+  },
+  {
+    "id": 5,
+    "title": "Producto de ejemplo5",
+    "description": "Este es un producto de ejemplo5",
+    "price": 105,
+    "thumbnail": "imagen5.png",
+    "code": "MNO456",
+    "stock": 15
+  },
+  {
+    "id": 6,
+    "title": "Producto de ejemplo6",
+    "description": "Este es un producto de ejemplo6",
+    "price": 106,
+    "thumbnail": "imagen6.png",
+    "code": "PQR789",
+    "stock": 16
+  },
+  {
+    "id": 7,
+    "title": "Producto de ejemplo7",
+    "description": "Este es un producto de ejemplo7",
+    "price": 107,
+    "thumbnail": "imagen7.png",
+    "code": "STU123",
+    "stock": 17
+  },
+  {
+    "id": 8,
+    "title": "Producto de ejemplo8",
+    "description": "Este es un producto de ejemplo8",
+    "price": 108,
+    "thumbnail": "imagen8.png",
+    "code": "VWX456",
+    "stock": 18
+  },
+  {
+    "id": 9,
+    "title": "Producto de ejemplo9",
+    "description": "Este es un producto de ejemplo9",
+    "price": 109,
+    "thumbnail": "imagen9.png",
+    "code": "YZA789",
+    "stock": 19
+  },
+  {
+    "id": 10,
+    "title": "Producto de ejemplo10",
+    "description": "Este es un producto de ejemplo10",
+    "price": 110,
+    "thumbnail": "imagen10.png",
+    "code": "BCD123",
+    "stock": 100
+  }
+]
