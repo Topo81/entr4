@@ -20,7 +20,7 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-const productRoutes = require('./src/routes/productRoutes.js');
+const productRoutes = require('../src/routes/productRoutes.js');
 const cartRoutes = require('./src/routes/cartRoutes.js');
 app.use('/products', productRoutes);
 app.use('/carts', cartRoutes);
@@ -46,6 +46,18 @@ app.get('/home', async (req, res) => {
         res.status(500).send('Error interno del servidor');
     }
 });
+
+// Ruta para renderizar la vista en tiempo real de los productos
+app.get('/realTimeProducts', async (req, res) => {
+    try {
+        const products = await readProducts();
+        res.render('realTimeProducts', { products: products });
+    } catch (error) {
+        console.error('Error al cargar los productos en tiempo real:', error);
+        res.status(500).send('Error interno del servidor');
+    }
+});
+
 
 // Configurar WebSocket para la vista de productos en tiempo real
 io.on('connection', (socket) => {

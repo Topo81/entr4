@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ProductManager = require('./src/ProductManager');
+const ProductManager = require('../src/ProductManager');
 const productManager = new ProductManager('./data/productos.json');
 
 // Ruta para obtener todos los productos o limitarlos según el parámetro de consulta ?limit=
