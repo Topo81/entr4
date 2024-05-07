@@ -20,7 +20,7 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-const productRoutes = require('../src/routes/productRoutes.js');
+const productRoutes = require('./src/routes/productRoutes.js');
 const cartRoutes = require('./src/routes/cartRoutes.js');
 app.use('/products', productRoutes);
 app.use('/carts', cartRoutes);
