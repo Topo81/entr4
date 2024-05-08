@@ -1,17 +1,20 @@
-const express = require('express');
-const handlebars = require('express-handlebars');
-const http = require('http');
 const path = require('path');
 const fs = require('fs').promises;
-const socketio = require('socket.io');
+const handlebars = require('express-handlebars');
+const viewsRouter = require('./src/routes/views.router.js');
+const { Server } = require('socket.io');
+
+const express = require('express')
 const app = express();
-const server = http.createServer(app);
-const io = socketio(server);
-
+const server = require('http').createServer(app);
+const io = new server(Server);
 const PORT = 8080;
-
+const httpServer = app.listen(PORT, console.log(`Server running on port ${PORT}`))
+const socketServer = new Server(httpServer)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
 
 // Configurar Handlebars como el motor de plantillas
 app.engine('handlebars', handlebars.engine({layoutsDir: path.join(__dirname, 'views')
@@ -24,6 +27,10 @@ const productRoutes = require('./src/routes/productRoutes.js');
 const cartRoutes = require('./src/routes/cartRoutes.js');
 app.use('/products', productRoutes);
 app.use('/carts', cartRoutes);
+
+socketServer.on('connection', socket=> {
+    console.log("nuevo cliente conectado")
+})
 
 // Leer el archivo JSON de productos
 async function readProducts() {
@@ -70,7 +77,7 @@ io.on('connection', (socket) => {
     });
 });
 
-// Iniciar el servidor
-server.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
+
+
+
+
