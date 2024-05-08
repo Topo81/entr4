@@ -4,12 +4,12 @@ const handlebars = require('express-handlebars');
 const viewsRouter = require('./src/routes/views.router.js');
 const { Server } = require('socket.io');
 
+const PORT = 8080;
 const express = require('express')
 const app = express();
 const server = require('http').createServer(app);
-const io = new server(Server);
-const PORT = 8080;
 const httpServer = app.listen(PORT, console.log(`Server running on port ${PORT}`))
+const io = new Server(httpServer);
 const socketServer = new Server(httpServer)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
