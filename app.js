@@ -10,7 +10,7 @@ const app = express();
 const server = require('http').createServer(app);
 const httpServer = app.listen(PORT, console.log(`Server running on port ${PORT}`))
 const io = new Server(httpServer);
-const socketServer = new Server(httpServer)
+//const socketServer = new Server(httpServer)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(viewsRouter)
@@ -29,7 +29,7 @@ const cartRoutes = require('./src/routes/cartRoutes.js');
 app.use('/products', productRoutes);
 app.use('/carts', cartRoutes);
 
-socketServer.on('connection', socket=> {
+io.on('connection', socket=> {
     console.log("nuevo cliente conectado")
 })
 
