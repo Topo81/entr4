@@ -88,5 +88,11 @@
     "thumbnail": "imagen10.png",
     "code": "BCD123",
     "stock": 100
+  },
+  {
+    "id": 11
+  },
+  {
+    "id": 12
   }
 ]

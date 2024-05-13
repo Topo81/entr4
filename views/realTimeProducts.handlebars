@@ -9,8 +9,9 @@
     <h1>Lista de Productos en Tiempo Real</h1>
     <ul id="products-list"></ul>
 
+       <script src="/socket.io/socket.io.js"></script>;
+    <script src="/entr4/src/public/js/index.js"> </script>;
     <script>
-        const socket = io();
 
         // Escucha el evento 'realTimeProducts' para actualizar la lista de productos
         socket.on('realTimeProducts', (products) => {
@@ -26,6 +27,5 @@
         
         socket.emit('getRealTimeProducts');
     </script>
-    <script src="/entr4/src/public/js/index.js"> </script>
 </body>
 </html>
