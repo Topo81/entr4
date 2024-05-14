@@ -29,9 +29,9 @@ const cartRoutes = require('./src/routes/cartRoutes.js');
 app.use('/products', productRoutes);
 app.use('/carts', cartRoutes);
 
-io.on('connection', socket=> {
-    console.log("nuevo cliente conectado")
-})
+//io.on('connection', socket=> {
+  //  console.log("nuevo cliente conectado")
+//})
 
 // Leer el archivo JSON de productos
 async function readProducts() {
